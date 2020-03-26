@@ -8,6 +8,16 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		
+		String[] ranks1 = {"Jack", "10", "3"};
+		String[] suits1 = {"Spades", "Hearts", "Diamonds"};
+		int[] values1 = {11, 10, 3};
+
+		Deck deck1 = new Deck(ranks1, suits1, values1);
+		System.out.println(deck1);
+		
+		deck1.deal();
+		
+		System.out.println(deck1);
 	}
 }
