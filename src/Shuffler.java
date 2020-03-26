@@ -8,7 +8,7 @@ public class Shuffler {
 	 * The number of consecutive shuffle steps to be performed in each call
 	 * to each sorting procedure.
 	 */
-	private static final int SHUFFLE_COUNT = 1;
+	private static final int SHUFFLE_COUNT = 10;
 
 
 	/**
@@ -86,9 +86,9 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		
-		for (int i = values.length - 1; i >= 1; i--) {
+		for (int i = values.length - 1; i >= 0; i--) {
 
-			double r = ((int)Math.random() + 1) * i;
+			int r = (int)(Math.random()*i);
 			int temp = values[i];
 			values[i] = values[r];
 			values[r] = temp;
@@ -96,4 +96,5 @@ public class Shuffler {
 		}
 
 	}
+
 }
